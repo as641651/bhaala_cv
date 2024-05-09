@@ -1,0 +1,156 @@
+{% extends 'base.html' %}
+{% block content %}
+<style>
+    .profile-section {
+        height: 1600px;
+        background-color: #ffc107; /* Bootstrap warning color */
+        color: #333;
+        padding: 20px;
+        position: relative; /* Adjusted from fixed to ensure visibility in PDF */
+        /* overflow-y: auto; */
+    }
+    .profile-picture {
+        width: 150px;
+        height: 150px;
+        background-color: #fff;
+        border-radius: 50%;
+        overflow: hidden;
+        display: block;
+        margin: 10px auto;
+    }
+    .content-section {
+        margin-left: 25px; /* Same as profile section width */
+        width: calc(100% - 250px); /* Adjusts width to fill the remaining screen */
+        padding: 20px;
+    }
+</style>
+<div class="container-fluid">
+    <div class="row no-gutters">
+        <div class="col-md-3 profile-section">
+            <div class="d-flex flex-column align-items-center">
+                <div class="profile-picture">
+                    <img src="https://via.placeholder.com/150" alt="Profile Picture" class="img-fluid">
+                </div>
+                <h3>John Doe</h3>
+                <p>MBA in Digital Marketing</p>
+                <p>Email: johndoe@example.com</p>
+                <p>Phone: 123-456-7890</p>
+            </div>
+        </div>
+        <div class="col py-3 content-section">
+            <h1 class="text-center">Curriculum Vitae</h1>
+
+            <!-- Education Section -->
+            <section id="education" class="my-5">
+                <h2>Education</h2>
+                <p>MBA with a specialization in Digital Marketing from XYZ University.</p>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Year</th>
+                            <th scope="col">Degree</th>
+                            <th scope="col">Institution</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2022</td>
+                            <td>MBA, Digital Marketing</td>
+                            <td>XYZ University</td>
+                        </tr>
+                        <tr>
+                            <td>2018</td>
+                            <td>Bachelor of Business Administration</td>
+                            <td>ABC College</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Experience Section -->
+            <section id="experience" class="my-5">
+                <h2>Experience</h2>
+                <p>Over 5 years of experience in content creation, SEO, and PPC campaigns.</p>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Year</th>
+                            <th scope="col">Position</th>
+                            <th scope="col">Company</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2023 - Present</td>
+                            <td>Digital Marketing Manager</td>
+                            <td>XYZ Corp</td>
+                        </tr>
+                        <tr>
+                            <td>2020 - 2023</td>
+                            <td>SEO Specialist</td>
+                            <td>Creative Solutions</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Skills Section -->
+            <section id="skills" class="my-5">
+                <h2>Skills</h2>
+                <p>Expert in Google Analytics, SEMrush, HubSpot, and Adobe Creative Suite.</p>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Skill</th>
+                            <th scope="col">Proficiency</th>
+                            <th scope="col">Years of Experience</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Google Analytics</td>
+                            <td>Advanced</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>SEMrush</td>
+                            <td>Advanced</td>
+                            <td>4</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="projects" class="my-5">
+                <h2>Projects</h2>
+                <p>Developed comprehensive digital campaigns for various industries including retail and tech.</p>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Year</th>
+                            <th scope="col">Project</th>
+                            <th scope="col">Result</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2022</td>
+                            <td>Launch of E-commerce Site</td>
+                            <td>Increase in client revenue by 120%</td>
+                        </tr>
+                        <tr>
+                            <td>2021</td>
+                            <td>Social Media Campaign</td>
+                            <td>Reached over 1M views</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <div class="text-center mb-3">
+                <a href="/download-cv" class="btn btn-success">Download CV as PDF</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
