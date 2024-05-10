@@ -33,12 +33,29 @@
     height: 100%;
     object-fit: cover; /* Ensures the image covers the space without distortion */
     object-position: center; /* Center the image within the element */
+
+    .compact {
+    margin-top: 0;
+    margin-bottom: 1px;  /* or any small value that fits your design */
+}
+
+    .cert-link{
+        font-size:14px;
+        color:blue;
+    }
 }
 </style>
 <div class="profile-section">
     <div class="d-flex justify-content-between">
-        <div class="m-3" id="profile-details">
-            {% include 'profile-details.html' %}
+        <div class="m-4" id="profile-details">
+            <h1>Bhaalasaraswathi Jayakumar</h1>
+            <p class="compact"><i class="fa fa-calendar" style="font-size:16px;"></i> <b>DOB</b>: 26<sup>th</sup> June 1998</p>
+            <p class="compact">
+                <i class="fa fa-mobile" style="font-size:16px;"></i> +49 15216747801 |  <i class="fa fa-envelope" style="font-size:16px;"></i> jskharini@gmail.com
+            </p>
+            <p class="compact"> <i class="fa fa-map-marker" style="font-size:16px;"></i> Joseph-von-Görres-Straße 54, 52068 Aachen, Germany</p>
+            <p class="compact"> <i class="fa fa-globe" style="font-size:16px;"></i> <a href="https://bhaala-portfolio.ey.r.appspot.com/"> https://bhaala-portfolio.ey.r.appspot.com/</a></p>
+
         </div>
         <div class="m-3 profile-picture">
             <img src="/home/aravind/codes/hdf5-tutorial/bhaala_cv/static/images/profile_pic.jpg" alt="Profile Picture">
@@ -47,8 +64,8 @@
     </div>
 </div>
 
-<div id="main-content" class="content-section">
-    {% include 'content.html' %}
+<div id="main-content" class="content-section m-3">
+    {% include 'content_print.html' %}
 
 </div>
 {% endblock %}

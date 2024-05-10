@@ -16,7 +16,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        /* align-items: center; */
+        align-items: center;
         background-color: #ffc107; /* Yellow background */
         position: relative;
         overflow: hidden; /* Prevents content from spilling out */
@@ -90,10 +90,9 @@
 </style>
 <div class="full-height">
 
-    <!-- {% include 'profile-details.html' %} -->
 
-    <div class="row p-5">
-        <div class="col-md-6">
+    <!-- <div class="row p-5"> -->
+        <!-- <div class="col-md-6"> -->
             <div class="profile-picture">
                 <img src="{{ url_for('static', filename='images/profile_pic.jpg') }}" alt="Profile Picture">
             </div>
@@ -103,18 +102,33 @@
                 <i class="fa fa-mobile" style="font-size:20px;"></i> +49 15216747801 |  <i class="fa fa-envelope" style="font-size:18px;"></i> jskharini@gmail.com
             </p>
             <p> <i class="fa fa-map-marker" style="font-size:20px;"></i> Joseph-von-Görres-Straße 54, 52068 Aachen, Germany</p>
-        </div>
+        <!-- </div> -->
         <!-- <div class="col-md-1">
             <div class="vr" style="height: 100%;"></div>
         </div> -->
         <!-- <div class="col-md-5 p-6 typewriter"> -->
-        <div class="col-md-5 p-6">
-            <!-- Statement of purpose..  -->
-            <p><i>Dear Mr. xxx, </i></p>
-            <p><i>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde maxime optio illo culpa vel itaque totam quos ullam quasi. Quibusdam est dicta itaque quae, amet ab distinctio odio saepe nobis.
-            </i></p>
-        </div>
-    </div>
+        <!-- <div class="col-md-5 p-6">
+            <p><i>Dear Mrs. Mehrdokht Jafari Kenari,</i></p>
+            <p><i> I am Bhaalasaraswathi, shortly referred to as Bhaala, writing to apply for the position of “Marketing Assistant” at the SYSMANO
+Gmbh (following the advertisement published on Indeed). I moved to Germany in 2022 after my marriage, and since then I have been actively enhancing my skills in multimedia content creation, digital marketing and learning the German language
+
+I had the opportunity to undertake internships at two organizations, HORBACH and India Lost & Found (ILF), 
+where I gained hands-on experience in developing digital media content
+such as drafting Instagram post and writing captivating stories in
+different formats. My ability to connect and resonate with various types of people helped me plan and organize various programs such as first aid
+training, community functions and debate competitions as part of my undergraduate program.
+
+Please refer to my personalized web-page (https://bhaala-portfolio.ey.r.appspot.com/) for the resume, portfolio and certificate links. I have also attached a PDF copy of my resume.
+
+I believe that I would be a good fit for your role, given my skills in multimedia content creation, digital marketing and my ability to connect with people.
+Thank you for considering my application. I'm open to work starting immediately and I look forward to a positive response from you.   
+
+                </i>
+            </p>
+            <p><i>With best regards,</i></p>
+            <p><i>Bhaalasaraswathi Jayakumar</i></p>
+        </div> -->
+    <!-- </div> -->
     <div class="d-flex justify-content-center">
         <a href="#main-content" class="scroll-down-button">
             <i class="bi bi-chevron-double-down" ></i>
@@ -125,7 +139,7 @@
 <div id="main-content" class="content-section">
     {% include 'content.html' %}
     <div class="text-center">
-        <a href="/download-cv" class="btn btn-success">Download CV as PDF</a>
+        <a href="https://drive.google.com/file/d/1UrhRNoFpDf3mTXZ9Ff8lqzzpLunauK7V/view?usp=drive_link" class="btn btn-success">Download CV as PDF</a>
     </div>
 </div>
 
