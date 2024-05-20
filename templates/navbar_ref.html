@@ -1,0 +1,83 @@
+<!-- <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
+    <div class="container-fluid d-flex justify-content-between">
+
+                
+        <div class="navbar-nav">
+            <a class="navbar-brand" href="#">ST Inspector</a>
+            <a href="#" class="nav-link">Home</a>
+            <a href="#" class="nav-link">About</a>
+
+        </div>
+        <div class="navbar-nav">
+            <a href="#" class="nav-link">Job: None</a>
+        </div>
+        <div class="navbar-nav">
+            <a href="#" class="nav-link">Help</a>
+            <a href="#" class="nav-link">Settings</a>
+            <a href="#" class="nav-link disabled">Site: Desktop</a>
+        </div>
+
+    </div>
+</nav> -->
+
+<nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle button grouped together for better mobile display -->
+        <a class="navbar-brand" href="{{ url_for('st_inspector_dashboard.index_local') }}">ST Inspector</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+            <div class="navbar-nav">
+                <a href="{{ url_for('st_inspector_dashboard.index_local') }}" class="nav-link">Home</a>
+                <a href="#" class="nav-link">About</a>
+                <a href="#" class="nav-link">Help</a>
+            </div>
+            {% if job_info %}
+            <div class="navbar-nav">
+                <a href="{{ url_for('st_inspector_dashboard.inspect', job_id=job_info['job_id']) }}" class="nav-link">Job: {{ job_info['job_id'] }}</a>
+            </div>
+            {% endif %}
+            <!-- <div class="navbar-nav">
+                <div class="dropdown">
+                    <a href="#" class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Job: None</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">IO Analysis</a></li>
+                    </ul>
+                </div>
+            </div> -->
+            <div class="navbar-nav">
+                <a href="#" class="nav-link disabled">System: Desktop</a>
+
+                <!-- <a href="#" class="nav-link"><i class="bi bi-question-circle"></i></a> -->
+                <a href="#" class="nav-link"><i class="bi bi-gear"></i></a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<nav class="navbar navbar-expand-md navbar-light bg-light fixed-bottom">
+    <div class="container-fluid d-flex justify-content-between">
+
+        <div class="navbar-nav">
+            <!-- <a href="#" class="nav-link disabled">Powered by</a> -->
+            <a class="navbar-brand" href="https://www.fz-juelich.de/en/ias/jsc">
+                <img src="{{ url_for('static', filename='st_inspector_dashboard/img/Logo_FZ.png') }}" width="90%" height="30">
+            </a>
+            <a href="https://www.fz-juelich.de/en/legal-notice" class="nav-link">Legal notice</a>
+        </div>
+        <!-- <div class="navbar-nav">
+            <a href="#" class="nav-link">Analysis controls</a>
+        </div> -->
+        {% if df_info %}
+            <div class="navbar-nav">
+                <a href="#" class="nav-link disabled">Analysis: {{ df_info['filter_id'] }}</a>
+                <!-- <a href="#" class="nav-link btn  btn-sm btn-warning">reset path</a> -->
+                <a href="{{ url_for('st_inspector_dashboard.analyse', job_id=job_info['job_id'], filter_id=df_info['filter_id']) }}" class="nav-link">Reset path</a>
+            </div>
+        {% endif %}
+
+    </div>
+</nav>
